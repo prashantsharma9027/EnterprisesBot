@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './App.css';
-
-
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -15,7 +13,7 @@ const App = () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await axios.get('http://localhost:3001/random-article');
+      const response = await axios.get(`${process.env.REACT_APP_SERVER_URL}/random-article`);
       setArticle(response.data);
     } catch (error) {
       setError('Error fetching article');
@@ -27,7 +25,7 @@ const App = () => {
   const sendArticleToTelegram = async () => {
     if (!article) return;
     try {
-      await axios.post('http://localhost:3001/send-article', {
+      await axios.post(`${process.env.REACT_APP_SERVER_URL}/send-article`, {
         title: article.title,
         extract: article.extract,
         url: article.content_urls.desktop.page,
@@ -73,7 +71,7 @@ const App = () => {
         )}
 
         <div className='text-2xl text-black py-14'>
-        Assigment Submitted by <a className='underline' href='https://prashant-sharma.vercel.app/'>Prashant Sharma</a>
+        Assignment Submitted by <a className='underline' href='https://prashant-sharma.vercel.app/'>Prashant Sharma</a>
         </div>
         
       </div>

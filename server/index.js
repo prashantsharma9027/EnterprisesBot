@@ -1,17 +1,18 @@
 const express = require('express');
 const axios = require('axios');
 const cors = require('cors');
-const dotenv = require('dotenv')
+const dotenv = require('dotenv');
+
+dotenv.config(); 
 
 const app = express();
-const port = 3001;
+const port = process.env.PORT || 3001; 
 
 app.use(cors());
 app.use(express.json());
 
 const TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 const CHAT_ID = process.env.TELEGRAM_CHAT_ID;
-
 
 const getRandomWikipediaArticle = async () => {
   try {
