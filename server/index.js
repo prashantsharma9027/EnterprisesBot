@@ -8,7 +8,14 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 3001; 
 
-app.use(cors());
+const corsOptions = {
+  origin: 'https://enterprises-bot.vercel.app/', 
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type'],
+  credentials: true, 
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 const TOKEN = process.env.TELEGRAM_BOT_TOKEN;
