@@ -9,8 +9,8 @@ const app = express();
 const port = process.env.PORT || 3001; 
 
 const corsOptions = {
-  origin: 'https://enterprises-bot.vercel.app/', 
-  methods: ['GET', 'POST'],
+  origin: ["https://enterprises-bot.vercel.app"], 
+  methods: ["GET", "POST"],
   allowedHeaders: ['Content-Type'],
   credentials: true, 
 };
