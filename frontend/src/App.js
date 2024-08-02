@@ -42,12 +42,19 @@ const App = () => {
       <div className="bg-purple-400 min-h-screen flex flex-col items-center justify-center text-white">
         <h1 className="text-3xl font-bold mb-4">Random Wikipedia Article</h1>
         <button
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4"
+        >
+        <a href='https://t.me/Prashant9027Bot'>Click to Join Bot</a>
+          
+        </button>
+        <button
           onClick={fetchRandomArticle}
           disabled={loading}
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4"
         >
           {loading ? 'Loading...' : 'Fetch Random Article'}
         </button>
+        
         {error && <p className="text-red-500 text-2xl font-bold bg-white rounded-md px-4 py-4">{error}</p>}
         {article && (
           <div className="bg-white text-black p-6 rounded-lg shadow-lg max-w-lg">
