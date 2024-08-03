@@ -44,7 +44,7 @@ const App = () => {
         <button
         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4"
         >
-        <a href='https://t.me/Prashant9027Bot'>Click to Join Bot</a>
+        <a href='https://t.me/WikiPediaGroup'>Click to Join Bot</a>
           
         </button>
         <button
