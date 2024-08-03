@@ -18,6 +18,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(express.json());
 
+
 const TOKEN = '6819938812:AAELgtp3sNGZNuIf0t7LYZ9_KGxBQZNTGP0';
 const GROUP_CHAT_ID =  '-1002194086845';  
 
