@@ -78,7 +78,7 @@ const App = () => {
         )}
 
         <div className='text-2xl text-black py-14'>
-        Assignment Submitted by <a className='underline' href='https://prashant-sharma.vercel.app/'>Prashant Sharma</a>
+        Created by <a className='underline' href='https://prashant-sharma.vercel.app/'>Prashant Sharma</a>
         </div>
         
       </div>
