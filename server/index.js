@@ -9,7 +9,7 @@ const app = express();
 const port = 3001;
 
 const corsOptions = {
-  origin: ["http://localhost:3000", "https://enterprises-bot.vercel.app"],
+  origin: ["http://localhost:3000", "https://telegram-wiki-bot.vercel.app/"],
   methods: ["GET", "POST"],
   allowedHeaders: ['Content-Type'],
   credentials: true,
